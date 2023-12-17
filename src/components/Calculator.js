@@ -15,7 +15,7 @@ export default function Calculator()
       setOperator("")
       setResult(false)
         }     
-    if(operator!=="" && currNum!=="" && prevNum!=="")
+    if(operator!=="" && currNum!=="" )
     {
      if(operator==="+")
      {
@@ -26,6 +26,10 @@ export default function Calculator()
      else if(operator==="-")
      {
         setPrevNum((prevNum)=>{
+            if(prevNum==="")
+            {
+                return Math.abs(currNum)
+            }
             return Number(prevNum - currNum)
         })
      }
