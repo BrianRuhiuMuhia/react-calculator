@@ -3,7 +3,13 @@ export default function Operator(props)
 {
     return (
         <button className="buttons" onClick={()=>{
-            props.setOperator(props.operation)
+            props.setOperator((operator)=>{
+if(operator==="")
+{
+    return props.operation
+}
+return ""
+            })
         }}>
             {props.operation}
         </button>

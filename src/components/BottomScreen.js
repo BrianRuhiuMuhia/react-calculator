@@ -1,7 +1,7 @@
 import {useState,useEffect} from 'react'
 export default function BottomScreen(props)
 {
-const [currentNum,setCurrentNum]=useState(props.currNum)
+const [currentNum,setCurrentNum]=useState(0)
 useEffect(()=>{
 if(props.currNum!=="")
 {
